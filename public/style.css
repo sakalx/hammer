@@ -1,0 +1,61 @@
+:root {
+    --hammer-position-x: 0;
+    --hammer-position-y: 0;
+}
+
+.__hammer {
+    animation: 1s infinite __hammer linear;
+    cursor: pointer;
+    font-size: 16px;
+    left: var(--hammer-position-x);
+    position: absolute;
+    top: var(--hammer-position-y);
+    z-index: 9999;
+}
+
+.__hammer__target {
+    box-shadow: inset 0 0 10px 0 #4688F1 !important;
+    cursor: pointer !important;
+}
+
+.__out__bottom {
+    animation: .5s __out__bottom;
+    backface-visibility: hidden;
+}
+
+
+@keyframes __hammer {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(45deg);
+    }
+    50% {
+        transform: rotate(-45deg);
+    }
+    75% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes __out__bottom {
+    0% {
+        animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transform-origin: bottom center;
+        transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+    }
+    50% {
+        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+        opacity: 1;
+        transform: scale3d(1.08, 1.08, 1.08) translate3d(0, 0, 0);
+    }
+    100% {
+        animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+        opacity: 0;
+        transform: scale3d(0.5, 0.5, 0.5) translate3d(0, 400px, 0);
+    }
+}
