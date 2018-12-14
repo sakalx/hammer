@@ -1,8 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Hammer",
-  "description": "Hammer extensions gives you a quick, easy and satisfying way to remove unnecessary elements and get a clean and pretty page for you to enjoy.",
-  "version": "1.0.0",
+  "name": "Hammer for smashing page",
+  "short_name": "Hammer",
+  "description": "Hammer gives you a quick, easy and satisfying way to remove unnecessary elements and get a clean and pretty page for you to enjoy.",
+  "version": "1.0.3",
   "author": "Serhii Sakal",
   "background": {
     "persistent": false,

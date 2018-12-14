@@ -103,8 +103,10 @@ const SMASH_EXTENSION = (() => {
       document.body.appendChild(hammerWrap);
     },
     removeHammer() {
-      const hammer = document.getElementsByClassName(this.classForHammer)[0];
-      hammer.remove()
+      const hammers = document.getElementsByClassName(this.classForHammer);
+      for (let hammer of hammers) {
+        hammer.remove();
+      }
     },
     addHoverStyle(target) {
       target.classList.add(this.classForHovered);
