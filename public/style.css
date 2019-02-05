@@ -11,6 +11,8 @@
     position: absolute;
     top: var(--hammer-position-y);
     z-index: 9999;
+    transition: all .1s ease-in-out;
+    transition-property: left, top;
 }
 
 .__hammer__target {
